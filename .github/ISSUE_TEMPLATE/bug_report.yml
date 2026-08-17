@@ -1,0 +1,28 @@
+name: Сообщить об ошибке
+description: Ошибка в работе магазина или админ-бота
+title: "[Ошибка]: "
+labels: [bug]
+body:
+  - type: dropdown
+    id: platform
+    attributes:
+      label: Где возникла ошибка?
+      options:
+        - Telegram-магазин
+        - MAX-магазин
+        - Telegram админ-бот
+        - Запуск / Docker
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: Что произошло?
+      description: Опишите ожидаемое и фактическое поведение.
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Логи без токенов и персональных данных
+      render: shell

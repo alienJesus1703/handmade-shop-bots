@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "handmade-shop-bots"
+version = "1.0.0"
+description = "Единый магазин изделий ручной работы для Telegram и MAX"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "aiohttp==3.14.3",
+    "python-dotenv==1.2.3",
+]
+
+[project.scripts]
+handmade-shop-bots = "src.main:main"
+
+[tool.setuptools]
+packages = ["src"]
+
+[tool.ruff]
+target-version = "py311"
+line-length = 120
+
+[tool.ruff.lint]
+select = ["F", "I", "UP", "B", "SIM", "RUF"]
+ignore = ["RUF001"]  # интерфейс и сообщения бота намеренно написаны по-русски

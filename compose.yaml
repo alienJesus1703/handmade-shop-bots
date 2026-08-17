@@ -1,0 +1,9 @@
+services:
+  shop-bots:
+    build: .
+    restart: unless-stopped
+    env_file: .env
+    volumes:
+      - ./data:/app/data
+    ports:
+      - "8080:8080"

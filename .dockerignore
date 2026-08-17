@@ -1,0 +1,11 @@
+.git
+.github
+.env
+.venv
+__pycache__
+*.pyc
+.ruff_cache
+tests
+data/*.db*
+data/products/*
+!data/products/.gitkeep
